@@ -54,7 +54,7 @@ export function getEntertainmentImage() {
 
 export function getGamingImage() {
     return new Promise((resolve, reject) => {
-        getImage('&source=ign').then((uri) => resolve(uri)).done();
+        getImage('&source=polygon').then((uri) => resolve(uri)).done();
     })
 }
 
@@ -72,7 +72,7 @@ export function getScienceImage() {
 
 export function getSportImage() {
     return new Promise((resolve, reject) => {
-        getImage('&source=espn').then((uri) => resolve(uri)).done();
+        getImage('&source=fox-sports').then((uri) => resolve(uri)).done();
     })
 }
 
@@ -115,7 +115,7 @@ export function getHomeArticles() {
                 resolve(articlesArray);
             }
         }).done();
-        getArticles('&source=ign').then((articles) => {
+        getArticles('&source=polygon').then((articles) => {
             articlesArray.gaming = articles ;
             if(Object.keys(articlesArray).length === 8) {
                 resolve(articlesArray);
@@ -139,7 +139,7 @@ export function getHomeArticles() {
                 resolve(articlesArray);
             }
         }).done();
-        getArticles('&source=espn').then((articles) => {
+        getArticles('&source=fox-sports').then((articles) => {
             articlesArray.sport = articles ;
             if(Object.keys(articlesArray).length === 8) {
                 resolve(articlesArray);
@@ -168,7 +168,7 @@ export function getBusinessArticles() {
 
 export function getGamingArticles() {
     return new Promise((resolve, reject) => {
-        getArticles('&source=ign').then((articles) => resolve(articles)).done();
+        getArticles('&source=polygon').then((articles) => resolve(articles)).done();
     })
 }
 export function getMusicArticles() {
@@ -188,7 +188,7 @@ export function getScienceArticles() {
 }
 export function getSportArticles() {
     return new Promise((resolve, reject) => {
-        getArticles('&source=espn').then((articles) => resolve(articles)).done();
+        getArticles('&source=fox-sports').then((articles) => resolve(articles)).done();
     })
 }
 export function getTechnologyArticles() {

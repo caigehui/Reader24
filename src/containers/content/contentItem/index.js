@@ -89,14 +89,14 @@ export default class contentItem extends Component {
                         if (this.state.saved) {
                             this.setState({ saved: false });
                         } else {
-                            showHUD(require('../../../assets/bookmark.png'), 'saved');
+                            showHUD(require('../../../assets/bookmark.png'), 'saved', 1000);
                             this.setState({ saved: true })
                         }
                     } } />
                     <ImageButton style={imgButtonStyle} img1Source={require('../../../assets/like.png')} img2Source={require('../../../assets/like-3.png')} onPress={(rebound) => {
                         this.setState({ likeRebound: rebound });
                         if (!this.state.like) {
-                            showHUD(require('../../../assets/like.png'), 'liked')
+                            showHUD(require('../../../assets/like.png'), 'liked', 1000)
                             this.setState({ like: true });
                             if (this.state.dislike) {
                                 this.setState({ dislike: false });
@@ -110,7 +110,7 @@ export default class contentItem extends Component {
                     <ImageButton style={imgButtonStyle} img1Source={require('../../../assets/dislike.png')} img2Source={require('../../../assets/dislike-3.png')} onPress={(rebound) => {
                         this.setState({ dislikeRebound: rebound });
                         if (!this.state.dislike) {
-                            showHUD(require('../../../assets/dislike.png'), 'disliked');
+                            showHUD(require('../../../assets/dislike.png'), 'disliked', 1000);
                             this.setState({ dislike: true });
                             if (this.state.like) {
                                 this.setState({ like: false });

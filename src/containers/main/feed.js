@@ -277,7 +277,7 @@ export default class feed extends Component {
                 storyPages.push(<Story key={i} page={i} articles={articlesToBePass} />)
             }
             return storyPages;
-        }else if(this.menuType === 'General') {
+        }else if(this.menuType === 'Saved') {
             return null;
         } 
         else {
